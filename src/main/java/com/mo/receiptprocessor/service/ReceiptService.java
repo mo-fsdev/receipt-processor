@@ -76,7 +76,7 @@ public class ReceiptService {
             BigDecimal total = new BigDecimal(totalStr);
             int points = 0;
 
-            if (total.stripTrailingZeros().scale() <= 0) { // Proper check for round dollar
+            if (total.stripTrailingZeros().scale() <= 0) {
                 points += 50;
                 logger.debug("Total {} is a round dollar amount: +50 points", total);
             }
